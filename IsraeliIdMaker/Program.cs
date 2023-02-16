@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using OfficeOpenXml;
@@ -49,8 +49,12 @@ namespace MyNamespace
                     worksheet.Cells[row, 4].Value = people[i].phoneNumber;
                 }
 
+                string username = Environment.UserName;
+
                 // Save the Excel file to disk
-                string filePath = "C:\\Users\\neriag\\Desktop\\people.xlsx";
+                string filePath = "C:\\Users\\" + username;
+                filePath += "\\Desktop\\people.xlsx";
+
                 FileInfo file = new FileInfo(filePath);
                 excelPackage.SaveAs(file);
             }
