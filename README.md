@@ -1,5 +1,3 @@
-# Generate_test_israeli_user_data
-Generate Israeli id, first name, last name and phone number
-
+Generates test data with valid israeli personal id numbers 
 needed nuget - EPPlus
  
